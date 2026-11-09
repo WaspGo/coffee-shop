@@ -42,6 +42,7 @@ npm run lint     # перевірити код ESLint
 src/
   assets/       Зображення та SVG-іконки
   components/   Спільні компоненти карток, кнопок і логотипів
+  data/         Спільні дані товарів для сторінок каталогу
   App.jsx       Маршрути та спільний макет застосунку
   LandingPage.jsx
   OurCoffee.jsx

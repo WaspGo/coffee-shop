@@ -2,7 +2,7 @@ import coffee from "./assets/bg-coffee.png";
 import { BeansLogo } from "./components/BeansLogo";
 import cupOfCoffee from "./assets/cupOfCoffee.png";
 import { Card } from "./components/Card";
-import aromisticoCoffee from "./assets/aromisticoCoffee.png";
+import coffeeData from "./data/coffeeData.js";
 
 function ForYourPleasure() {
   return (
@@ -40,73 +40,11 @@ function ForYourPleasure() {
         </div>
         <div className="mx-auto mt-[60px] h-0 w-[240px] max-w-full border border-black"></div>
         <div className="mx-auto mt-[61px] grid w-full max-w-[1090px] grid-cols-[repeat(1,220px)] justify-center gap-x-6 gap-y-10 px-4 min-[520px]:grid-cols-[repeat(2,220px)] md:gap-x-10 min-[900px]:grid-cols-[repeat(3,220px)] xl:gap-x-[70px]">
-          <Card
-            name={"aromisticoCoffee"}
-            img={aromisticoCoffee}
-            country="Brazil"
-            alt="aromisticoCoffee brand icon"
-            background="bg-white"
-            shadow="shadow-[5px_5px_15px_0_rgba(0,0,0,0.25)]"
-            text="AROMISTICO Coffee 1 kg"
-            price="6.99$"
-            variation="ourcoffee"
-          />
-
-          <Card
-            name={"aromisticoCoffee"}
-            img={aromisticoCoffee}
-            country="Kenya"
-            alt="aromisticoCoffee brand icon"
-            background="bg-white"
-            shadow="shadow-[5px_5px_15px_0_rgba(0,0,0,0.25)]"
-            text="AROMISTICO Coffee 1 kg"
-            price="6.99$"
-            variation="ourcoffee"
-          />
-          <Card
-            name={"aromisticoCoffee"}
-            img={aromisticoCoffee}
-            country="Columbia"
-            alt="aromisticoCoffee brand icon"
-            background="bg-white"
-            shadow="shadow-[5px_5px_15px_0_rgba(0,0,0,0.25)]"
-            text="AROMISTICO Coffee 1 kg"
-            price="6.99$"
-            variation="ourcoffee"
-          />
-          <Card
-            name={"aromisticoCoffee"}
-            img={aromisticoCoffee}
-            country="Brazil"
-            alt="aromisticoCoffee brand icon"
-            background="bg-white"
-            shadow="shadow-[5px_5px_15px_0_rgba(0,0,0,0.25)]"
-            text="AROMISTICO Coffee 1 kg"
-            price="6.99$"
-            variation="ourcoffee"
-          />
-          <Card
-            name={"aromisticoCoffee"}
-            img={aromisticoCoffee}
-            country="Brazil"
-            alt="aromisticoCoffee brand icon"
-            background="bg-white"
-            shadow="shadow-[5px_5px_15px_0_rgba(0,0,0,0.25)]"
-            text="AROMISTICO Coffee 1 kg"
-            price="6.99$"
-            variation="ourcoffee"
-          />
-          <Card
-            name={"aromisticoCoffee"}
-            img={aromisticoCoffee}
-            country="Brazil"
-            alt="aromisticoCoffee brand icon"
-            background="bg-white"
-            shadow="shadow-[5px_5px_15px_0_rgba(0,0,0,0.25)]"
-            text="AROMISTICO Coffee 1 kg"
-            price="6.99$"
-            variation="ourcoffee"
-          />
+          {coffeeData
+            .filter((coffee) => coffee.collections?.includes("pleasure"))
+            .map((coffee) => (
+              <Card key={coffee.id} {...coffee} variation="ourcoffee" />
+            ))}
         </div>
       </section>
     </>

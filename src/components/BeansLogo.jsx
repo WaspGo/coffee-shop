@@ -4,7 +4,8 @@ export function BeansLogo(props) {
   const { color, marginTop } = props;
   return (
     <div
-      className={`flex gap-[27px] items-center justify-center mt-[${marginTop}px]`}
+      style={{ marginTop: `${marginTop}px` }}
+      className="flex gap-[27px] items-center justify-center"
     >
       <div
         className={`border border-${color} w-[60px] h-0 shadow-[0_2px_4px_0_rgba(0,0,0,0.25)]`}

@@ -3,12 +3,10 @@ import { Link } from "react-router-dom";
 
 import { BeansLogo } from "./components/BeansLogo.jsx";
 import { Card } from "./components/Card.jsx";
+import coffeeData from "./data/coffeeData.js";
 
 import desk from "./assets/bg-desk.png";
 import paper from "./assets/bg-paper.png";
-import aromisticoCoffee from "./assets/aromisticoCoffee.png";
-import prestoCoffee from "./assets/prestoCoffe.png";
-import solimoCoffee from "./assets/solimoCoffee.png";
 
 function LandingPage() {
   return (
@@ -60,36 +58,11 @@ function LandingPage() {
           Our best
         </h2>
         <div className="mx-auto mt-[39px] flex flex-wrap items-center justify-center gap-[30px] px-4">
-          <Card
-            name={"solimoCoffee"}
-            img={solimoCoffee}
-            country="Brazil"
-            alt="solimoCoffee brand icon"
-            background="bg-white/65"
-            text="Solimo Coffee Beans 2 kg"
-            price="10.73$"
-            variation="landing"
-          />
-          <Card
-            name={"prestoCoffee"}
-            img={prestoCoffee}
-            country="Brazil"
-            alt="solimoCoffee brand icon"
-            background="bg-white/65"
-            text="Presto Coffee Beans 1 kg"
-            price="15.99$"
-            variation="landing"
-          />
-          <Card
-            name={"aromisticoCoffee"}
-            img={aromisticoCoffee}
-            country="Brazil"
-            alt="aromisticoCoffee brand icon"
-            background="bg-white/65"
-            text="AROMISTICO Coffee 1 kg"
-            price="6.99$"
-            variation="landing"
-          />
+          {coffeeData
+            .filter((coffee) => coffee.featured)
+            .map((coffee) => (
+              <Card key={coffee.id} {...coffee} variation="landing" />
+            ))}
         </div>
       </section>
     </>
