@@ -18,7 +18,7 @@ function ForYourPleasure() {
       <section className="px-4 pt-10 pb-[30px] sm:pt-[70px]">
         <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-8 md:flex-row md:justify-center md:gap-[84px]">
           <img
-            className="w-full max-w-[355px] object-cover"
+            className=" max-w-[355px] object-cover"
             src={cupOfCoffee}
             alt="Coffee cup"
           />

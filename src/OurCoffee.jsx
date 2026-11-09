@@ -38,11 +38,7 @@ class OurCoffee extends Component {
         <BgCoffee />
         <section className="px-4 pb-[30px]">
           <div className="mx-auto mt-10 flex w-full max-w-5xl flex-col items-center gap-8 md:mt-[70px] md:flex-row md:justify-center md:gap-[80px]">
-            <img
-              className="w-full max-w-[355px] object-cover"
-              src={girl}
-              alt=""
-            />
+            <img className=" max-w-[355px] object-cover" src={girl} alt="" />
             <div className="w-full max-w-[346px]">
               <h2 className="text-center text-[24px]">About our beans</h2>
               <BeansLogo color="black" marginTop="20" />
