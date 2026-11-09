@@ -8,20 +8,24 @@ function ForYourPleasure() {
   return (
     <>
       <section
-        className=" w-full pt-[181px] pb-[201px] bg-cover bg-center bg-no-repeat"
+        className="w-full bg-cover bg-center bg-no-repeat px-4 py-32 sm:pt-[181px] sm:pb-[201px]"
         style={{ backgroundImage: `url(${coffee})` }}
       >
-        <h1 className="[text-shadow:0_4px_4px_rgba(0,0,0,0.25)] font-bold text-white text-[40px] text-center">
+        <h1 className="text-center text-3xl font-bold text-white [text-shadow:0_4px_4px_rgba(0,0,0,0.25)] sm:text-[40px]">
           For your pleasure
         </h1>
       </section>
-      <section className="pt-[70px] pb-[30px]">
-        <div className="flex justify-center gap-[84px] ">
-          <img className="object-cover" src={cupOfCoffee} alt="" />
-          <div>
+      <section className="px-4 pt-10 pb-[30px] sm:pt-[70px]">
+        <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-8 md:flex-row md:justify-center md:gap-[84px]">
+          <img
+            className="w-full max-w-[355px] object-cover"
+            src={cupOfCoffee}
+            alt="Coffee cup"
+          />
+          <div className="w-full max-w-[346px]">
             <h2 className="text-center text-[24px]">About it</h2>
             <BeansLogo color="black" marginTop="20" />
-            <p className="mt-[25px] w-[346px] text-center text-[14px]">
+            <p className="mt-[25px] text-center text-[14px]">
               Extremity sweetness difficult behaviour he of. On disposal of as
               landlord horrible. <br />
               <br />
@@ -34,8 +38,8 @@ function ForYourPleasure() {
             </p>
           </div>
         </div>
-        <div className="mt-[60px] mx-auto w-[240px] h-[0px] border border-black"></div>
-        <div className="mt-[61px] mx-[320px] grid grid-cols-[repeat(3,_220px)] gap-[70px] justify-center items-center">
+        <div className="mx-auto mt-[60px] h-0 w-[240px] max-w-full border border-black"></div>
+        <div className="mx-auto mt-[61px] grid w-full max-w-[1090px] grid-cols-[repeat(1,220px)] justify-center gap-x-6 gap-y-10 px-4 min-[520px]:grid-cols-[repeat(2,220px)] md:gap-x-10 min-[900px]:grid-cols-[repeat(3,220px)] xl:gap-x-[70px]">
           <Card
             name={"aromisticoCoffee"}
             img={aromisticoCoffee}

@@ -14,27 +14,27 @@ function LandingPage() {
   return (
     <>
       <section
-        className=" w-full pt-[181px] pb-[201px] bg-cover bg-center bg-no-repeat"
+        className="w-full bg-cover bg-center bg-no-repeat px-4 py-32 sm:pt-[181px] sm:pb-[201px]"
         style={{ backgroundImage: `url(${desk})` }}
       >
-        <h1 className=" [text-shadow:0_4px_4px_rgba(0,0,0,0.25)] font-bold text-white text-[40px] text-center">
+        <h1 className="text-center text-3xl font-bold text-white [text-shadow:0_4px_4px_rgba(0,0,0,0.25)] sm:text-[40px]">
           Everything You Love About Coffee
         </h1>
         <BeansLogo color="white" marginTop="20" />
-        <h2 className="mt-[34px] font-bold text-white text-center text-[24px]">
+        <h2 className="mt-[34px] text-center text-lg font-bold text-white sm:text-[24px]">
           We makes every day full of energy and taste
         </h2>
-        <h2 className="mt-[20px] font-bold text-white text-center text-[24px]">
+        <h2 className="mt-[20px] text-center text-lg font-bold text-white sm:text-[24px]">
           Want to try our beans?
         </h2>
         <Link to="/ourcoffee">
-          <button className="p-[5px] mt-[18px] mx-auto border border-white rounded-[3px] w-[120px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] bg-transparent text-white text-xs flex items-center justify-center text-[14px] font-bold text-white">
+          <button className="mx-auto mt-[18px] flex w-[120px] items-center justify-center rounded-[3px] border border-white bg-transparent p-[5px] text-[14px] font-bold text-white shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
             More
           </button>
         </Link>
       </section>
       <section className="pb-[101px]">
-        <h2 className="mt-[80px] font-normal text-black text-center text-[24px]">
+        <h2 className="mt-14 text-center text-[24px] font-normal text-black sm:mt-[80px]">
           About Us
         </h2>
         <BeansLogo color="black" marginTop="20" />
@@ -53,10 +53,10 @@ function LandingPage() {
         </p>
       </section>
       <section
-        className="pt-[80px] w-full bg-cover bg-center bg-no-repeat pb-[110px]"
+        className="w-full bg-cover bg-center bg-no-repeat px-4 py-16 sm:pt-[80px] sm:pb-[110px]"
         style={{ backgroundImage: `url(${paper})` }}
       >
-        <h2 className=" font-normal text-black text-center text-[24px]">
+        <h2 className="text-center text-[24px] font-normal text-black">
           Our best
         </h2>
         <div className="mx-auto mt-[39px] flex flex-wrap items-center justify-center gap-[30px] px-4">
