@@ -1,75 +1,50 @@
-# React + TypeScript + Vite
+# Coffee Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Навчальний вебзастосунок кав'ярні, створений на React і Vite. У проєкті є головна сторінка, каталог кави з пошуком і фільтром за країною, а також сторінки з інформацією про каву.
 
-Currently, two official plugins are available:
+## Технології
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React
+- Vite
+- React Router
+- Tailwind CSS 4
 
-## React Compiler
+## Запуск локально
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Потрібен Node.js та npm.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Після запуску Vite покаже локальну адресу застосунку в терміналі.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Команди
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev      # запустити dev-сервер
+npm run build    # створити production-збірку в dist/
+npm run preview  # переглянути production-збірку локально
+npm run lint     # перевірити код ESLint
+```
 
+## Сторінки
+
+- `/` — головна сторінка з рекомендованою кавою.
+- `/ourcoffee` — каталог кави з пошуком за назвою та фільтром за країною.
+- `/abouiit` — сторінка з інформацією про вибрану каву.
+- `/foryourpleasure` — сторінка кави для задоволення.
+
+## Структура проєкту
+
+```text
+src/
+  assets/       Зображення та SVG-іконки
+  components/   Спільні компоненти карток, кнопок і логотипів
+  App.jsx       Маршрути та спільний макет застосунку
+  LandingPage.jsx
+  OurCoffee.jsx
+  aboutit.jsx
+  foryourpleasure.jsx
 ```
